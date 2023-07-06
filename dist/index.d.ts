@@ -9,6 +9,7 @@ interface PasswordStrengthBarState {
 export interface PasswordStrengthBarProps {
     className?: string;
     style?: CSSProperties;
+    styleItem?: CSSProperties;
     scoreWordClassName?: string;
     scoreWordStyle?: CSSProperties;
     password: string;

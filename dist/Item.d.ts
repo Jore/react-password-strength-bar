@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 interface PasswordStrengthBarItemProps {
     score: number;
     itemNum: number;
     barColors: string[];
+    styleItem: CSSProperties;
 }
 declare const Item: React.FunctionComponent<PasswordStrengthBarItemProps>;
 export default Item;

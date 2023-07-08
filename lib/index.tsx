@@ -35,11 +35,13 @@ const rootStyle: CSSProperties = {
   position: 'relative',
 };
 
-const wrapStyle: CSSProperties = {
+const rootWrapStyle: CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   margin: '5px 0 0',
 };
+
+const wrapStyle: CSSProperties = {};
 
 const spaceStyle: CSSProperties = {
   width: 4,
@@ -126,7 +128,7 @@ class PasswordStrengthBar extends React.Component<
 
     return (
       <div className={className} style={{ ...rootStyle, ...style }}>
-        <div style={wrapStyle}>
+        <div style={{...rootWrapStyle, ...wrapStyle}}>
           {[1, 2, 3, 4].map((el: number) => (
             <Fragment key={`password-strength-bar-item-${el}`}>
               {el > 1 && <div style={spaceStyle} />}

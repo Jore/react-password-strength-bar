@@ -12,6 +12,7 @@ export interface PasswordStrengthBarProps {
     styleItem?: CSSProperties;
     scoreWordClassName?: string;
     scoreWordStyle?: CSSProperties;
+    wrapStyle: CSSProperties;
     password: string;
     userInputs?: string[];
     barColors?: string[];

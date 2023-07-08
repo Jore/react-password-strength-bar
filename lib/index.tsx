@@ -19,6 +19,7 @@ export interface PasswordStrengthBarProps {
   styleItem?: CSSProperties;
   scoreWordClassName?: string;
   scoreWordStyle?: CSSProperties;
+  wrapStyle: CSSProperties;
   password: string;
   userInputs?: string[];
   barColors?: string[];
@@ -41,8 +42,6 @@ const rootWrapStyle: CSSProperties = {
   margin: '5px 0 0',
 };
 
-const wrapStyle: CSSProperties = {};
-
 const spaceStyle: CSSProperties = {
   width: 4,
 };
@@ -62,6 +61,7 @@ class PasswordStrengthBar extends React.Component<
     className: undefined,
     style: undefined,
     styleItem: undefined,
+    wrapStyle: undefined,
     scoreWordClassName: undefined,
     scoreWordStyle: undefined,
     password: '',
@@ -116,6 +116,7 @@ class PasswordStrengthBar extends React.Component<
       styleItem,
       scoreWordClassName,
       scoreWordStyle,
+      wrapStyle,
       password,
       barColors,
       scoreWords,
